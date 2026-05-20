@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 44 56% 97%;
+    --foreground: 142 28% 14%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 142 28% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 142 28% 14%;
+
+    --primary: 142 54% 27%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 86 37% 88%;
+    --secondary-foreground: 142 38% 20%;
+
+    --muted: 44 33% 91%;
+    --muted-foreground: 143 12% 42%;
+
+    --accent: 38 74% 88%;
+    --accent-foreground: 35 44% 24%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 90 18% 84%;
+    --input: 90 18% 84%;
+    --ring: 142 54% 27%;
+
+    --radius: 1rem;
+
+    --chart-1: 142 76% 36%;
+    --chart-2: 199 89% 48%;
+    --chart-3: 43 100% 50%;
+    --chart-4: 0 84% 60%;
+    --chart-5: 280 65% 60%;
+  }
+
+  .dark {
+    /* Optional: Keep a refined dark mode using deep greens instead of pure black */
+    --background: 142 40% 6%;
+    --foreground: 142 20% 96%;
+
+    --card: 142 40% 8%;
+    --card-foreground: 142 20% 96%;
+
+    --popover: 142 40% 8%;
+    --popover-foreground: 142 20% 96%;
+
+    --primary: 142 70% 45%;
+    --primary-foreground: 142 40% 6%;
+
+    --secondary: 142 20% 14%;
+    --secondary-foreground: 142 20% 96%;
+
+    --muted: 142 20% 14%;
+    --muted-foreground: 142 20% 65%;
+
+    --accent: 142 20% 16%;
+    --accent-foreground: 142 20% 96%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 142 20% 18%;
+    --input: 142 20% 18%;
+    --ring: 142 70% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
+  }
+
+  .section-gap {
+    @apply py-16 md:py-24;
+  }
+
+  .farm-card-shadow {
+    box-shadow: 0 24px 70px -36px rgba(35, 74, 48, 0.45);
+  }
+}
+
+/* Custom scrollbar for a cleaner look */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-muted-foreground/30 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground/50;
+}

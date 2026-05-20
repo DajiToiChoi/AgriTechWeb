@@ -1,0 +1,55 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  FARMER
+  CUSTOMER
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String?
+  role      Role     @default(CUSTOMER)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  farms     Farm[]   @relation("FarmOwner")
+}
+
+model Farm {
+  id        String   @id @default(cuid())
+  name      String
+  location  String?
+  ownerId   String
+  owner     User     @relation("FarmOwner", fields: [ownerId], references: [id])
+  
+  batches   CropBatch[]
+}
+
+model CropBatch {
+  id              String   @id @default(cuid())
+  cropType        String
+  plantedAt       DateTime
+  expectedHarvest DateTime
+  status          String
+  farmId          String
+  farm            Farm     @relation(fields: [farmId], references: [id])
+  
+  certifications  Certificate[]
+}
+
+model Certificate {
+  id        String   @id @default(cuid())
+  name      String
+  batchId   String
+  batch     CropBatch @relation(fields: [batchId], references: [id], onDelete: Cascade)
+}

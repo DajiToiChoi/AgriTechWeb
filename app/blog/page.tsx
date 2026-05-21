@@ -56,8 +56,8 @@ export default function BlogPage() {
             <p className="mt-4 leading-8 text-muted-foreground">
               Với hệ thống camera trực tuyến, khách hàng có thể theo dõi quá trình chăm sóc và thu hoạch tại khu vườn bất cứ lúc nào.
             </p>
-            <Link href="/trace/RM202604001" className="mt-6 inline-flex items-center gap-2 font-semibold text-primary">
-              Xem Live Camera ngay
+            <Link href="/farms" className="mt-6 inline-flex items-center gap-2 font-semibold text-primary">
+              Xem Farm Anh Đạt
               <Camera className="h-4 w-4" />
             </Link>
           </div>
@@ -69,8 +69,8 @@ export default function BlogPage() {
             <p className="mt-4 leading-7 text-muted-foreground">
               Hệ thống giám sát giúp khách hàng biết thời điểm cây được tưới nước, chăm sóc và đóng gói.
             </p>
-            <Link href="/trace/RM202604001" className="mt-6 inline-flex items-center gap-2 font-semibold text-primary">
-              Xem nhật ký vườn
+            <Link href="/farms" className="mt-6 inline-flex items-center gap-2 font-semibold text-primary">
+              Xem câu chuyện farm
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

@@ -44,7 +44,7 @@ export default async function DashboardPage() {
                 Trung tâm vận hành trang trại
               </h1>
               <p className="mt-4 max-w-2xl text-white/85">
-                Theo dõi cảm biến, Live Cam, cảnh báo và nhật ký canh tác của lô rau muống 01 trong cùng một màn hình.
+                Theo dõi cảm biến, Live Cam, cảnh báo và nhật ký canh tác của khu rau xanh Farm Anh Đạt trong cùng một màn hình.
               </p>
             </div>
             <div className="rounded-3xl bg-white/12 p-5 backdrop-blur">
@@ -65,10 +65,10 @@ export default async function DashboardPage() {
           <div className="mb-6 flex flex-col justify-between gap-4 md:flex-row md:items-end">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">IoT Sensor</p>
-              <h2 className="mt-2 text-2xl font-extrabold text-primary">Trạng thái cảm biến lô rau muống 01</h2>
+              <h2 className="mt-2 text-2xl font-extrabold text-primary">Trạng thái cảm biến khu rau xanh Farm Anh Đạt</h2>
             </div>
-            <Link href="/trace/RM202604001" className="font-semibold text-primary hover:underline">
-              Xem trang truy xuất công khai
+            <Link href="/farms" className="font-semibold text-primary hover:underline">
+              Xem trang Farm Anh Đạt
             </Link>
           </div>
 
@@ -169,8 +169,8 @@ export default async function DashboardPage() {
                   </div>
                 ))}
               </div>
-              <Link href="/trace/RM202604001" className="mt-6 block rounded-full bg-secondary px-5 py-3 text-center text-sm font-semibold text-primary">
-                Xem toàn bộ nhật ký lô hàng
+              <Link href="/farms" className="mt-6 block rounded-full bg-secondary px-5 py-3 text-center text-sm font-semibold text-primary">
+                Xem thông tin farm công khai
               </Link>
             </section>
           </aside>

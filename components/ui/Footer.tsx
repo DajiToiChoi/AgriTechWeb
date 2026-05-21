@@ -31,7 +31,7 @@ export function Footer() {
             <li><Link className="hover:text-primary" href="/farms">Trang trại</Link></li>
             <li><Link className="hover:text-primary" href="/about">Về chúng tôi</Link></li>
             <li><Link className="hover:text-primary" href="/blog">Blog</Link></li>
-            <li><Link className="hover:text-primary" href="/trace/RM202604001">Truy xuất nguồn gốc</Link></li>
+            <li><Link className="hover:text-primary" href="/marketing">AI Assistant</Link></li>
           </ul>
         </div>
 

@@ -39,7 +39,7 @@ export function CameraFeed() {
             {isPlaying ? <Video className="h-5 w-5" /> : <Play className="h-5 w-5" />}
           </button>
           <div>
-            <p className="text-sm font-bold">Khu rau muống lô 01</p>
+            <p className="text-sm font-bold">Khu rau xanh Farm Anh Đạt</p>
             <p className="text-xs text-white/70">Độ trễ mô phỏng: 2 giây</p>
           </div>
         </div>

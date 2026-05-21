@@ -10,17 +10,36 @@ export type FarmKnowledge = {
 };
 
 const defaultKnowledge = `
-VieGarden currently monitors crop batch RM202604001.
-Crop: Rau muống thủy canh VietGAP.
-Farm: Farm Anh Đạt, Đà Lạt, Lâm Đồng.
-Growing method: hydroponic, IoT-monitored temperature, humidity, pH, EC, moisture and light.
-Planting date: 01/04/2026.
-Expected harvest date: 26/04/2026.
-Current status: cây phát triển ổn định, lá xanh, sẵn sàng kiểm tra trước thu hoạch.
-Certifications: VietGAP.
-Basic ingredient notes: rau muống thường được dùng để xào tỏi, luộc, nấu canh chua; có chất xơ và một số vitamin/khoáng chất ở mức tham khảo.
-Customer answer policy: suggest combos, storage, preparation, cooking ideas and basic components only. Do not provide deep nutrition, medical claims, disease treatment or therapeutic meal plans.
-If uploaded data does not contain an answer about farm inventory, harvest date, certification or batch status, say that VieGarden has not uploaded that information yet.
+VieGarden project data.
+Current farm partner: Farm Anh Đạt.
+Location: Đà Lạt, Lâm Đồng.
+Website phase: public project introduction, no customer account segmentation yet.
+
+Current available produce at Farm Anh Đạt:
+1. Rau mùng tơi
+- Common cooking ideas: canh mùng tơi nấu cua, canh mùng tơi tôm khô, canh mùng tơi thịt bằm.
+- Basic components: chất xơ, vitamin A, vitamin C và một số khoáng chất ở mức tham khảo.
+- Storage: bọc giấy hoặc túi thoáng, để ngăn mát 2-4°C, nên dùng trong 1-2 ngày.
+
+2. Rau cải
+- Common cooking ideas: rau cải luộc, canh cải thịt bằm, rau cải xào tỏi.
+- Basic components: chất xơ, vitamin C, vitamin K và folate ở mức tham khảo.
+- Storage: giữ lá khô, bọc kín vừa phải, để ngăn mát 2-4°C.
+
+3. Đậu que
+- Common cooking ideas: đậu que xào tỏi, đậu que xào thịt bò, đậu que luộc chấm kho quẹt.
+- Basic components: chất xơ, vitamin C, vitamin K và một ít đạm thực vật ở mức tham khảo.
+- Storage: không rửa trước khi cất, cho vào túi/hộp thoáng, nên dùng trong 2-3 ngày.
+
+Suggested combos:
+- Combo canh thanh mát: rau mùng tơi + rau cải.
+- Combo xào nhanh: rau cải + đậu que.
+- Combo gia đình 4 người: mùng tơi nấu canh, cải luộc, đậu que xào tỏi.
+
+Customer answer policy:
+- Suggest combos, storage, preparation, cooking ideas and basic components only.
+- Do not provide deep nutrition, medical claims, disease treatment or therapeutic meal plans.
+- If a question asks about inventory, price, harvest date, certification or batch status and the uploaded data does not include it, say VieGarden has not uploaded that information yet.
 `.trim();
 
 export async function getFarmKnowledge(): Promise<FarmKnowledge> {

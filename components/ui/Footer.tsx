@@ -1,22 +1,25 @@
 import Link from "next/link";
-import { Facebook, Globe2, Leaf, Mail, MapPin, Phone, Send } from "lucide-react";
+import { Facebook, Globe2, Mail, MapPin, Send } from "lucide-react";
 
 export function Footer() {
   return (
     <footer className="border-t bg-card">
       <div className="container-page grid gap-10 py-14 md:grid-cols-4">
         <div>
-          <Link href="/" className="mb-4 flex items-center gap-2 text-2xl font-extrabold text-primary">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground">
-              <Leaf className="h-5 w-5" />
-            </span>
-            VieGarden
+          <Link href="/" className="mb-4 flex items-center" aria-label="VieGarden trang chủ">
+            <img src="/logo-viegarden.svg" alt="VieGarden" className="h-14 w-auto" />
           </Link>
           <p className="leading-7 text-muted-foreground">
-            Nuôi dưỡng niềm tin thông qua nông nghiệp minh bạch, Live Cam và dữ liệu truy xuất rõ ràng.
+            Nuôi dưỡng niềm tin thông qua nông nghiệp minh bạch, trải nghiệm nông trại và trợ lý AI cho nông sản sạch.
           </p>
           <div className="mt-5 flex gap-3">
-            <a className="flex h-10 w-10 items-center justify-center rounded-full bg-secondary text-primary" href="#" aria-label="Facebook">
+            <a
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-secondary text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+              href="https://www.facebook.com/Viegarden26"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Facebook VieGarden"
+            >
               <Facebook className="h-5 w-5" />
             </a>
             <a className="flex h-10 w-10 items-center justify-center rounded-full bg-secondary text-primary" href="#" aria-label="Website">
@@ -38,15 +41,14 @@ export function Footer() {
         <div>
           <h3 className="mb-5 font-extrabold text-primary">Liên hệ</h3>
           <ul className="space-y-4 text-muted-foreground">
-            <li className="flex gap-3"><Phone className="h-5 w-5 text-primary" /> 1900 1234</li>
             <li className="flex gap-3"><Mail className="h-5 w-5 text-primary" /> viegarden2026@gmail.com</li>
-            <li className="flex gap-3"><MapPin className="h-5 w-5 text-primary" /> Đà Lạt, Lâm Đồng</li>
+            <li className="flex gap-3"><MapPin className="h-5 w-5 text-primary" /> Hà Nội</li>
           </ul>
         </div>
 
         <div>
           <h3 className="mb-5 font-extrabold text-primary">Bản tin</h3>
-          <p className="mb-4 text-muted-foreground">Nhận thông báo khi có lô rau mới và lịch thu hoạch.</p>
+          <p className="mb-4 text-muted-foreground">Nhận thông báo khi có sản phẩm mới và lịch trải nghiệm farm.</p>
           <div className="flex overflow-hidden rounded-2xl border bg-background">
             <input className="min-w-0 flex-1 bg-transparent px-4 py-3 outline-none" placeholder="Email của bạn" />
             <button className="bg-primary px-4 text-primary-foreground" aria-label="Đăng ký bản tin">

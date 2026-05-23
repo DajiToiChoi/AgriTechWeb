@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { getServerSession } from "next-auth";
 import {
   Bell,
@@ -31,28 +31,28 @@ export default async function DashboardPage() {
   return (
     <main className="min-h-screen bg-background pb-16">
       <section className="relative overflow-hidden bg-primary text-white">
-        <img src={farmImages.fields} alt="Trang trại VieGarden" className="absolute inset-0 h-full w-full object-cover opacity-25" />
+        <img src={farmImages.fields} alt="Trang tráº¡i VieGarden" className="absolute inset-0 h-full w-full object-cover opacity-25" />
         <div className="absolute inset-0 bg-primary/85" />
         <div className="container-page relative py-12 md:py-16">
           <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
             <div className="max-w-3xl">
               <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-2 text-sm font-semibold backdrop-blur">
                 <span className="h-2 w-2 rounded-full bg-lime-300" />
-                Farm Anh Đạt đang vận hành ổn định
+                Farm Together Ä‘ang váº­n hÃ nh á»•n Ä‘á»‹nh
               </div>
               <h1 className="text-3xl font-extrabold tracking-tight md:text-5xl">
-                Trung tâm vận hành trang trại
+                Trung tÃ¢m váº­n hÃ nh trang tráº¡i
               </h1>
               <p className="mt-4 max-w-2xl text-white/85">
-                Theo dõi cảm biến, Live Cam, cảnh báo và nhật ký canh tác của khu rau xanh Farm Anh Đạt trong cùng một màn hình.
+                Theo dÃµi cáº£m biáº¿n, Live Cam, cáº£nh bÃ¡o vÃ  nháº­t kÃ½ canh tÃ¡c cá»§a khu rau xanh Farm Together trong cÃ¹ng má»™t mÃ n hÃ¬nh.
               </p>
             </div>
             <div className="rounded-3xl bg-white/12 p-5 backdrop-blur">
               <div className="flex items-center gap-3">
                 <MapPin className="h-5 w-5" />
                 <div>
-                  <p className="text-sm text-white/70">Vị trí</p>
-                  <p className="font-bold">Đà Lạt, Lâm Đồng</p>
+                  <p className="text-sm text-white/70">Vá»‹ trÃ­</p>
+                  <p className="font-bold">ÄÃ  Láº¡t, LÃ¢m Äá»“ng</p>
                 </div>
               </div>
             </div>
@@ -65,10 +65,10 @@ export default async function DashboardPage() {
           <div className="mb-6 flex flex-col justify-between gap-4 md:flex-row md:items-end">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">IoT Sensor</p>
-              <h2 className="mt-2 text-2xl font-extrabold text-primary">Trạng thái cảm biến khu rau xanh Farm Anh Đạt</h2>
+              <h2 className="mt-2 text-2xl font-extrabold text-primary">Tráº¡ng thÃ¡i cáº£m biáº¿n khu rau xanh Farm Together</h2>
             </div>
             <Link href="/farms" className="font-semibold text-primary hover:underline">
-              Xem trang Farm Anh Đạt
+              Xem trang Farm Together
             </Link>
           </div>
 
@@ -86,17 +86,17 @@ export default async function DashboardPage() {
           <section className="rounded-3xl border border-primary/20 bg-primary/10 p-6">
             <div className="flex items-center gap-3 text-primary">
               <ShieldAlert className="h-6 w-6" />
-              <h2 className="text-xl font-extrabold">Khu vực Admin</h2>
+              <h2 className="text-xl font-extrabold">Khu vá»±c Admin</h2>
             </div>
             <p className="mt-3 max-w-3xl text-muted-foreground">
-              Tài khoản admin có thể kiểm soát farm, người dùng, chứng nhận và trạng thái công khai của từng lô hàng.
+              TÃ i khoáº£n admin cÃ³ thá»ƒ kiá»ƒm soÃ¡t farm, ngÆ°á»i dÃ¹ng, chá»©ng nháº­n vÃ  tráº¡ng thÃ¡i cÃ´ng khai cá»§a tá»«ng lÃ´ hÃ ng.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
               <button className="rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground">
-                Quản lý người dùng
+                Quáº£n lÃ½ ngÆ°á»i dÃ¹ng
               </button>
               <button className="rounded-full border bg-card px-5 py-3 text-sm font-semibold text-primary">
-                Kiểm duyệt chứng nhận
+                Kiá»ƒm duyá»‡t chá»©ng nháº­n
               </button>
             </div>
           </section>
@@ -107,12 +107,12 @@ export default async function DashboardPage() {
             <section className="rounded-3xl border bg-card p-6 shadow-sm">
               <div className="mb-6 flex flex-col justify-between gap-3 md:flex-row md:items-center">
                 <div>
-                  <h3 className="text-xl font-extrabold text-primary">Biểu đồ nhiệt độ theo thời gian</h3>
-                  <p className="text-sm text-muted-foreground">Mock data hiện có, sẵn sàng thay bằng dữ liệu sensor thật.</p>
+                  <h3 className="text-xl font-extrabold text-primary">Biá»ƒu Ä‘á»“ nhiá»‡t Ä‘á»™ theo thá»i gian</h3>
+                  <p className="text-sm text-muted-foreground">Mock data hiá»‡n cÃ³, sáºµn sÃ ng thay báº±ng dá»¯ liá»‡u sensor tháº­t.</p>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
                   <span className="h-3 w-3 rounded-full bg-primary" />
-                  Nhiệt độ
+                  Nhiá»‡t Ä‘á»™
                 </div>
               </div>
               <RealtimeChart dataKey="temperature" color="hsl(var(--primary))" />
@@ -120,8 +120,8 @@ export default async function DashboardPage() {
 
             <section className="rounded-3xl border bg-card p-6 shadow-sm">
               <div className="mb-6">
-                <h3 className="text-xl font-extrabold text-primary">Live Cam khu trồng</h3>
-                <p className="text-sm text-muted-foreground">Giao diện theo dõi trực tiếp giống định hướng VieGarden.</p>
+                <h3 className="text-xl font-extrabold text-primary">Live Cam khu trá»“ng</h3>
+                <p className="text-sm text-muted-foreground">Giao diá»‡n theo dÃµi trá»±c tiáº¿p giá»‘ng Ä‘á»‹nh hÆ°á»›ng VieGarden.</p>
               </div>
               <CameraFeed />
             </section>
@@ -131,7 +131,7 @@ export default async function DashboardPage() {
             <section className="rounded-3xl border bg-card p-6 shadow-sm">
               <div className="mb-6 flex items-center gap-2">
                 <Bell className="h-5 w-5 text-primary" />
-                <h3 className="text-xl font-extrabold text-primary">Cảnh báo hệ thống</h3>
+                <h3 className="text-xl font-extrabold text-primary">Cáº£nh bÃ¡o há»‡ thá»‘ng</h3>
               </div>
               <div className="space-y-4">
                 {MOCK_ALERTS.map((alert) => (
@@ -155,7 +155,7 @@ export default async function DashboardPage() {
             <section className="rounded-3xl border bg-card p-6 shadow-sm">
               <div className="mb-6 flex items-center gap-2">
                 <ClipboardList className="h-5 w-5 text-primary" />
-                <h3 className="text-xl font-extrabold text-primary">Nhật ký gần đây</h3>
+                <h3 className="text-xl font-extrabold text-primary">Nháº­t kÃ½ gáº§n Ä‘Ã¢y</h3>
               </div>
               <div>
                 {MOCK_PRODUCTION_LOGS.map((log, index) => (
@@ -170,7 +170,7 @@ export default async function DashboardPage() {
                 ))}
               </div>
               <Link href="/farms" className="mt-6 block rounded-full bg-secondary px-5 py-3 text-center text-sm font-semibold text-primary">
-                Xem thông tin farm công khai
+                Xem thÃ´ng tin farm cÃ´ng khai
               </Link>
             </section>
           </aside>
@@ -179,3 +179,5 @@ export default async function DashboardPage() {
     </main>
   );
 }
+
+

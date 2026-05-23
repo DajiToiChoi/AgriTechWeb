@@ -2,12 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Bot, BookOpen, Info, Map, Menu, Sprout, X } from "lucide-react";
+import { Bot, BookOpen, Home, Info, Map, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 
 const links = [
-  { href: "/", label: "Trang chủ", icon: Sprout },
+  { href: "/", label: "Trang chủ", icon: Home },
   { href: "/farms", label: "Trang trại", icon: Map },
   { href: "/about", label: "Về chúng tôi", icon: Info },
   { href: "/blog", label: "Blog", icon: BookOpen },
@@ -46,11 +46,8 @@ export function Navbar() {
   return (
     <nav className="sticky top-0 z-[100] w-full border-b border-border/60 bg-card/90 backdrop-blur-xl">
       <div className="container-page flex h-20 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 text-2xl font-extrabold tracking-tight text-primary">
-          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground">
-            <Sprout className="h-5 w-5" />
-          </span>
-          VieGarden
+        <Link href="/" className="flex items-center" aria-label="VieGarden trang chủ">
+          <img src="/logo-viegarden.svg" alt="VieGarden" className="h-12 w-auto" />
         </Link>
 
         <div className="hidden items-center gap-1 lg:flex">{links.map((link) => renderLink(link))}</div>

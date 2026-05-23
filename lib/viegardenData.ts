@@ -38,7 +38,7 @@ export const farmProducts = [
 export const featuredFarms = [
   {
     name: "Farm Together",
-    location: "Đà Lạt, Lâm Đồng",
+    location: "Đông Anh, Hà Nội",
     type: "Hữu cơ",
     description:
       "Đối tác farm hiện tại của VieGarden, đang có rau mùng tơi, rau cải và đậu que. Website tập trung giới thiệu câu chuyện hợp tác, sản phẩm theo mùa và trải nghiệm nông trại minh bạch.",

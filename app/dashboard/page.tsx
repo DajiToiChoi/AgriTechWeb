@@ -52,7 +52,7 @@ export default async function DashboardPage() {
                 <MapPin className="h-5 w-5" />
                 <div>
                   <p className="text-sm text-white/70">Vị trí</p>
-                  <p className="font-bold">Đà Lạt, Lâm Đồng</p>
+                  <p className="font-bold">Đông Anh, Hà Nội</p>
                 </div>
               </div>
             </div>

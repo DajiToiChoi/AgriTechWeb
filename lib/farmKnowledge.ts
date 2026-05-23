@@ -12,7 +12,7 @@ export type FarmKnowledge = {
 const defaultKnowledge = `
 VieGarden project data.
 Current farm partner: Farm Together.
-Location: Đà Lạt, Lâm Đồng.
+Location: Đông Anh, Hà Nội.
 Website phase: public project introduction, no customer account segmentation yet.
 
 Current available produce at Farm Together:

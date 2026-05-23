@@ -14,6 +14,10 @@ const beVietnam = Be_Vietnam_Pro({
 export const metadata: Metadata = {
   title: "VieGarden",
   description: "Kết nối trải nghiệm nông nghiệp minh bạch qua Live Cam, IoT và AI.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

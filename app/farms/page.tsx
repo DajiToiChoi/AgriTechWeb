@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { ArrowRight, Leaf, MapPin, Star } from "lucide-react";
 import { farmProducts, featuredFarms } from "@/lib/viegardenData";
 
@@ -9,12 +9,11 @@ export default function FarmsPage() {
     <main className="min-h-screen bg-background">
       <section className="container-page py-14">
         <div className="mb-10 max-w-3xl">
-          <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-primary">Trang tráº¡i Ä‘á»‘i tÃ¡c</p>
-          <h1 className="text-4xl font-extrabold tracking-tight text-primary md:text-5xl">
-            Farm Together
-          </h1>
+          <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-primary">Trang trại đối tác</p>
+          <h1 className="text-4xl font-extrabold tracking-tight text-primary md:text-5xl">Farm Together</h1>
           <p className="mt-5 text-lg leading-8 text-muted-foreground">
-            Hiá»‡n VieGarden Ä‘ang táº­p trung há»£p tÃ¡c vá»›i Farm Together. CÃ¡c sáº£n pháº©m Ä‘ang cÃ³ gá»“m rau mÃ¹ng tÆ¡i, rau cáº£i vÃ  Ä‘áº­u que.
+            Hiện VieGarden đang tập trung hợp tác với Farm Together. Các sản phẩm đang có gồm rau mùng tơi,
+            rau cải và đậu que.
           </p>
         </div>
 
@@ -45,7 +44,7 @@ export default function FarmsPage() {
             </div>
 
             <Link href="/marketing" className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground">
-              Há»i AI gá»£i Ã½ combo
+              Hỏi AI gợi ý combo
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
@@ -54,5 +53,3 @@ export default function FarmsPage() {
     </main>
   );
 }
-
-

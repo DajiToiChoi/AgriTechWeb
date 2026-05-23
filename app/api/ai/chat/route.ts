@@ -1,4 +1,4 @@
-﻿import { NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import { getFarmKnowledge } from "@/lib/farmKnowledge";
 
 export const runtime = "nodejs";
@@ -15,7 +15,7 @@ const maxKnowledgeChars = 6000;
 function compactKnowledge(content: string) {
   const normalized = content.replace(/\s+\n/g, "\n").replace(/\n{3,}/g, "\n\n").trim();
   return normalized.length > maxKnowledgeChars
-    ? `${normalized.slice(0, maxKnowledgeChars)}\n\n[ÄÃ£ rÃºt gá»n dá»¯ liá»‡u upload vÃ¬ quÃ¡ dÃ i.]`
+    ? `${normalized.slice(0, maxKnowledgeChars)}\n\n[Đã rút gọn dữ liệu upload vì quá dài.]`
     : normalized;
 }
 
@@ -39,7 +39,7 @@ export async function POST(request: Request) {
 
   if (!apiKey) {
     return NextResponse.json(
-      { error: "AI Assistant chÆ°a Ä‘Æ°á»£c cáº¥u hÃ¬nh API key trÃªn server." },
+      { error: "AI Assistant chưa được cấu hình API key trên server." },
       { status: 500 },
     );
   }
@@ -49,7 +49,7 @@ export async function POST(request: Request) {
     const incomingMessages = body.messages?.filter((message) => message.role !== "system") || [];
 
     if (!incomingMessages.length) {
-      return NextResponse.json({ error: "Tin nháº¯n khÃ´ng Ä‘Æ°á»£c Ä‘á»ƒ trá»‘ng." }, { status: 400 });
+      return NextResponse.json({ error: "Tin nhắn không được để trống." }, { status: 400 });
     }
 
     const knowledge = await getFarmKnowledge();
@@ -72,11 +72,11 @@ export async function POST(request: Request) {
           {
             role: "system",
             content: [
-              "Báº¡n lÃ  VieGarden AI Assistant, chatbot há»— trá»£ khÃ¡ch hÃ ng vá» nÃ´ng sáº£n sáº¡ch cá»§a Farm Together.",
-              "Pháº¡m vi tráº£ lá»i: gá»£i Ã½ combo rau cá»§ quáº£, cÃ¡ch sÆ¡ cháº¿/cháº¿ biáº¿n, báº£o quáº£n, gá»£i Ã½ mÃ³n Äƒn, vÃ  thÃ nh pháº§n cÆ¡ báº£n nhÆ° vitamin, khoÃ¡ng cháº¥t, cháº¥t xÆ¡.",
-              "KhÃ´ng tÆ° váº¥n dinh dÆ°á»¡ng chuyÃªn sÃ¢u, khÃ´ng láº­p thá»±c Ä‘Æ¡n Ä‘iá»u trá»‹, khÃ´ng nÃ³i sáº£n pháº©m chá»¯a bá»‡nh, khÃ´ng thay tháº¿ bÃ¡c sÄ©/chuyÃªn gia dinh dÆ°á»¡ng.",
-              "Khi khÃ¡ch há»i vá» farm, tá»“n kho, chá»©ng nháº­n, ngÃ y thu hoáº¡ch hoáº·c cÃ¡ch canh tÃ¡c, chá»‰ dÃ¹ng FARM DATA bÃªn dÆ°á»›i. Náº¿u khÃ´ng cÃ³ thÃ´ng tin, nÃ³i rÃµ VieGarden chÆ°a upload thÃ´ng tin Ä‘Ã³.",
-              "Tráº£ lá»i báº±ng tiáº¿ng Viá»‡t, ngáº¯n gá»n, thÃ¢n thiá»‡n. KhÃ´ng dÃ¹ng Markdown thÃ´ nhÆ° dáº¥u *, **, ###. Náº¿u cáº§n liá»‡t kÃª, viáº¿t má»—i Ã½ trÃªn má»™t dÃ²ng báº¯t Ä‘áº§u báº±ng dáº¥u gáº¡ch ngang '-'.",
+              "Bạn là VieGarden AI Assistant, chatbot hỗ trợ khách hàng về nông sản sạch của Farm Together.",
+              "Phạm vi trả lời: gợi ý combo rau củ quả, cách sơ chế/chế biến, bảo quản, gợi ý món ăn, và thành phần cơ bản như vitamin, khoáng chất, chất xơ.",
+              "Không tư vấn dinh dưỡng chuyên sâu, không lập thực đơn điều trị, không nói sản phẩm chữa bệnh, không thay thế bác sĩ/chuyên gia dinh dưỡng.",
+              "Khi khách hỏi về farm, tồn kho, chứng nhận, ngày thu hoạch hoặc cách canh tác, chỉ dùng FARM DATA bên dưới. Nếu không có thông tin, nói rõ VieGarden chưa upload thông tin đó.",
+              "Trả lời bằng tiếng Việt, ngắn gọn, thân thiện. Không dùng Markdown thô như dấu *, **, ###. Nếu cần liệt kê, viết mỗi ý trên một dòng bắt đầu bằng dấu gạch ngang '-'.",
               "",
               "FARM DATA:",
               compactKnowledge(knowledge.content),
@@ -90,7 +90,7 @@ export async function POST(request: Request) {
     if (!openRouterResponse.ok || !openRouterResponse.body) {
       const result = await openRouterResponse.json().catch(() => null);
       return NextResponse.json(
-        { error: result?.error?.message || "AI Assistant chÆ°a táº¡o Ä‘Æ°á»£c pháº£n há»“i." },
+        { error: result?.error?.message || "AI Assistant chưa tạo được phản hồi." },
         { status: openRouterResponse.status },
       );
     }
@@ -137,7 +137,7 @@ export async function POST(request: Request) {
           }
         } catch (error) {
           controller.enqueue(
-            encoder.encode(error instanceof Error ? `\n${error.message}` : "\nKhÃ´ng thá»ƒ Ä‘á»c pháº£n há»“i AI."),
+            encoder.encode(error instanceof Error ? `\n${error.message}` : "\nKhông thể đọc phản hồi AI."),
           );
         } finally {
           if (!isClosed) {
@@ -151,8 +151,6 @@ export async function POST(request: Request) {
       headers: streamHeaders(),
     });
   } catch (error) {
-    return errorStream(error instanceof Error ? error.message : "KhÃ´ng thá»ƒ káº¿t ná»‘i AI Assistant.");
+    return errorStream(error instanceof Error ? error.message : "Không thể kết nối AI Assistant.");
   }
 }
-
-

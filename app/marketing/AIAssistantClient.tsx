@@ -286,6 +286,7 @@ export function AIAssistantClient() {
                 <button
                   disabled={isChatLoading}
                   className="absolute right-3 top-1/2 flex -translate-y-1/2 items-center justify-center rounded-xl bg-primary p-2 text-primary-foreground disabled:opacity-60"
+                  aria-label="Gửi câu hỏi"
                 >
                   <Send className="h-5 w-5" />
                 </button>

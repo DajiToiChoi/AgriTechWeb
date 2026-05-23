@@ -47,7 +47,7 @@ export function Navbar() {
     <nav className="sticky top-0 z-[100] w-full border-b border-border/60 bg-card/90 backdrop-blur-xl">
       <div className="container-page flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center" aria-label="VieGarden trang chủ">
-          <img src="/logo-viegarden.svg" alt="VieGarden" className="h-12 w-auto" />
+          <img src="/logo-viegarden.svg" alt="VieGarden" className="h-11 w-auto max-w-[190px] object-contain sm:h-12" />
         </Link>
 
         <div className="hidden items-center gap-1 lg:flex">{links.map((link) => renderLink(link))}</div>

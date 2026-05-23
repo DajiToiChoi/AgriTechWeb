@@ -7,7 +7,7 @@ export function Footer() {
       <div className="container-page grid gap-10 py-14 md:grid-cols-4">
         <div>
           <Link href="/" className="mb-4 flex items-center" aria-label="VieGarden trang chủ">
-            <img src="/logo-viegarden.svg" alt="VieGarden" className="h-14 w-auto" />
+            <img src="/logo-viegarden.svg" alt="VieGarden" className="h-14 w-auto max-w-[220px] object-contain" />
           </Link>
           <p className="leading-7 text-muted-foreground">
             Nuôi dưỡng niềm tin thông qua nông nghiệp minh bạch, trải nghiệm nông trại và trợ lý AI cho nông sản sạch.

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { Maximize, Play, Settings, Video } from "lucide-react";
 import Image from "next/image";
@@ -34,20 +34,20 @@ export function CameraFeed() {
           <button
             onClick={() => setIsPlaying(!isPlaying)}
             className="rounded-full bg-white/15 p-2 transition-colors hover:bg-primary"
-            aria-label={isPlaying ? "Táº¡m dá»«ng camera" : "PhÃ¡t camera"}
+            aria-label={isPlaying ? "Tạm dừng camera" : "Phát camera"}
           >
             {isPlaying ? <Video className="h-5 w-5" /> : <Play className="h-5 w-5" />}
           </button>
           <div>
             <p className="text-sm font-bold">Khu rau xanh Farm Together</p>
-            <p className="text-xs text-white/70">Äá»™ trá»… mÃ´ phá»ng: 2 giÃ¢y</p>
+            <p className="text-xs text-white/70">Độ trễ mô phỏng: 2 giây</p>
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <button className="rounded-full bg-white/15 p-2 transition-colors hover:bg-primary" aria-label="CÃ i Ä‘áº·t camera">
+          <button className="rounded-full bg-white/15 p-2 transition-colors hover:bg-primary" aria-label="Cài đặt camera">
             <Settings className="h-5 w-5" />
           </button>
-          <button className="rounded-full bg-white/15 p-2 transition-colors hover:bg-primary" aria-label="PhÃ³ng to camera">
+          <button className="rounded-full bg-white/15 p-2 transition-colors hover:bg-primary" aria-label="Phóng to camera">
             <Maximize className="h-5 w-5" />
           </button>
         </div>
@@ -58,7 +58,7 @@ export function CameraFeed() {
           <button
             onClick={() => setIsPlaying(true)}
             className="rounded-full bg-white/20 p-5 text-white backdrop-blur-md transition-all hover:scale-105 hover:bg-primary"
-            aria-label="PhÃ¡t láº¡i camera"
+            aria-label="Phát lại camera"
           >
             <Play className="ml-1 h-9 w-9" />
           </button>
@@ -67,5 +67,3 @@ export function CameraFeed() {
     </div>
   );
 }
-
-

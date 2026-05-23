@@ -1,4 +1,4 @@
-﻿export const farmImages = {
+export const farmImages = {
   hero:
     "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1800&q=85",
   greenhouse:
@@ -13,45 +13,43 @@
 
 export const farmProducts = [
   {
-    name: "Rau mÃ¹ng tÆ¡i",
-    description: "Rau lÃ¡ xanh má»m, há»£p náº¥u canh cua, canh tÃ´m hoáº·c canh thá»‹t báº±m.",
-    basicComponents: "Cháº¥t xÆ¡, vitamin A, vitamin C vÃ  má»™t sá»‘ khoÃ¡ng cháº¥t á»Ÿ má»©c tham kháº£o.",
-    cookingIdeas: ["Canh mÃ¹ng tÆ¡i náº¥u cua", "Canh mÃ¹ng tÆ¡i tÃ´m khÃ´", "MÃ¹ng tÆ¡i náº¥u thá»‹t báº±m"],
-    storage: "Bá»c giáº¥y hoáº·c tÃºi thoÃ¡ng, báº£o quáº£n ngÄƒn mÃ¡t 2-4Â°C vÃ  dÃ¹ng trong 1-2 ngÃ y.",
+    name: "Rau mùng tơi",
+    description: "Rau lá xanh mềm, hợp nấu canh cua, canh tôm hoặc canh thịt bằm.",
+    basicComponents: "Chất xơ, vitamin A, vitamin C và một số khoáng chất ở mức tham khảo.",
+    cookingIdeas: ["Canh mùng tơi nấu cua", "Canh mùng tơi tôm khô", "Mùng tơi nấu thịt bằm"],
+    storage: "Bọc giấy hoặc túi thoáng, bảo quản ngăn mát 2-4°C và dùng trong 1-2 ngày.",
   },
   {
-    name: "Rau cáº£i",
-    description: "Rau xanh dá»… cháº¿ biáº¿n, vá»‹ thanh, há»£p mÃ³n canh, luá»™c hoáº·c xÃ o nháº¹.",
-    basicComponents: "Cháº¥t xÆ¡, vitamin C, vitamin K vÃ  folate á»Ÿ má»©c tham kháº£o.",
-    cookingIdeas: ["Rau cáº£i luá»™c", "Canh cáº£i thá»‹t báº±m", "Rau cáº£i xÃ o tá»i"],
-    storage: "Giá»¯ khÃ´ pháº§n lÃ¡, bá»c kÃ­n vá»«a pháº£i vÃ  báº£o quáº£n ngÄƒn mÃ¡t 2-4Â°C.",
+    name: "Rau cải",
+    description: "Rau xanh dễ chế biến, vị thanh, hợp món canh, luộc hoặc xào nhẹ.",
+    basicComponents: "Chất xơ, vitamin C, vitamin K và folate ở mức tham khảo.",
+    cookingIdeas: ["Rau cải luộc", "Canh cải thịt bằm", "Rau cải xào tỏi"],
+    storage: "Giữ khô phần lá, bọc kín vừa phải và bảo quản ngăn mát 2-4°C.",
   },
   {
-    name: "Äáº­u que",
-    description: "Äáº­u non giÃ²n, há»£p xÃ o, luá»™c hoáº·c phá»‘i cÃ¹ng thá»‹t, trá»©ng vÃ  náº¥m.",
-    basicComponents: "Cháº¥t xÆ¡, vitamin C, vitamin K vÃ  má»™t Ã­t Ä‘áº¡m thá»±c váº­t á»Ÿ má»©c tham kháº£o.",
-    cookingIdeas: ["Äáº­u que xÃ o tá»i", "Äáº­u que xÃ o thá»‹t bÃ²", "Äáº­u que luá»™c cháº¥m kho quáº¹t"],
-    storage: "KhÃ´ng rá»­a trÆ°á»›c khi cáº¥t, cho vÃ o tÃºi/há»™p thoÃ¡ng vÃ  dÃ¹ng trong 2-3 ngÃ y.",
+    name: "Đậu que",
+    description: "Đậu non giòn, hợp xào, luộc hoặc phối cùng thịt, trứng và nấm.",
+    basicComponents: "Chất xơ, vitamin C, vitamin K và một ít đạm thực vật ở mức tham khảo.",
+    cookingIdeas: ["Đậu que xào tỏi", "Đậu que xào thịt bò", "Đậu que luộc chấm kho quẹt"],
+    storage: "Không rửa trước khi cất, cho vào túi/hộp thoáng và dùng trong 2-3 ngày.",
   },
 ];
 
 export const featuredFarms = [
   {
     name: "Farm Together",
-    location: "ÄÃ  Láº¡t, LÃ¢m Äá»“ng",
-    type: "Há»¯u cÆ¡",
+    location: "Đà Lạt, Lâm Đồng",
+    type: "Hữu cơ",
     description:
-      "Äá»‘i tÃ¡c farm hiá»‡n táº¡i cá»§a VieGarden, Ä‘ang cÃ³ rau mÃ¹ng tÆ¡i, rau cáº£i vÃ  Ä‘áº­u que. Website táº­p trung giá»›i thiá»‡u cÃ¢u chuyá»‡n há»£p tÃ¡c, sáº£n pháº©m theo mÃ¹a vÃ  tráº£i nghiá»‡m nÃ´ng tráº¡i minh báº¡ch.",
+      "Đối tác farm hiện tại của VieGarden, đang có rau mùng tơi, rau cải và đậu que. Website tập trung giới thiệu câu chuyện hợp tác, sản phẩm theo mùa và trải nghiệm nông trại minh bạch.",
     image: farmImages.strawberry,
-    badge: "Äá»‘i tÃ¡c chÃ­nh",
+    badge: "Đối tác chính",
   },
 ];
 
 export const quickPrompts = [
-  "Gá»£i Ã½ combo mÃ¹ng tÆ¡i, rau cáº£i, Ä‘áº­u que",
-  "Rau mÃ¹ng tÆ¡i cháº¿ biáº¿n mÃ³n gÃ¬?",
-  "CÃ¡ch báº£o quáº£n rau cáº£i vÃ  Ä‘áº­u que",
-  "CÃ¡c loáº¡i rau nÃ y cÃ³ cháº¥t xÆ¡ gÃ¬?",
+  "Gợi ý combo mùng tơi, rau cải, đậu que",
+  "Rau mùng tơi chế biến món gì?",
+  "Cách bảo quản rau cải và đậu que",
+  "Các loại rau này có chất xơ gì?",
 ];
-
-

@@ -59,7 +59,7 @@ export function CameraFeed() {
           </button>
           <div>
             <p className="text-sm font-bold">Khu rau xanh Farm Together</p>
-            <p className="text-xs text-white/70">Video mô phỏng Live Cam đang phát lặp</p>
+            <p className="text-xs text-white/70">Live Cam đang hoạt động</p>
           </div>
         </div>
         <div className="flex items-center gap-2">

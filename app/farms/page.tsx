@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, Leaf, MapPin, Star } from "lucide-react";
+import { CameraFeed } from "@/components/ui/CameraFeed";
 import { farmProducts, featuredFarms } from "@/lib/viegardenData";
 
 export default function FarmsPage() {
@@ -49,6 +50,17 @@ export default function FarmsPage() {
             </Link>
           </div>
         </article>
+      </section>
+
+      <section className="container-page pb-16">
+        <div className="mb-6 max-w-3xl">
+          <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-primary">Live Cam tạm thời</p>
+          <h2 className="text-3xl font-extrabold text-primary">Theo dõi khu rau xanh Farm Together</h2>
+          <p className="mt-4 leading-8 text-muted-foreground">
+            Video đang được phát lặp để mô phỏng luồng Live Cam trong giai đoạn chưa xuất được RTSP.
+          </p>
+        </div>
+        <CameraFeed />
       </section>
     </main>
   );

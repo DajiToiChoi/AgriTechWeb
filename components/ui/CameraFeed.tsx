@@ -1,21 +1,40 @@
 "use client";
 
 import { Maximize, Play, Settings, Video } from "lucide-react";
-import Image from "next/image";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export function CameraFeed() {
   const [isPlaying, setIsPlaying] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  async function togglePlayback() {
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (video.paused) {
+      await video.play().catch(() => undefined);
+      setIsPlaying(true);
+      return;
+    }
+
+    video.pause();
+    setIsPlaying(false);
+  }
 
   return (
     <div className="group relative aspect-video w-full overflow-hidden rounded-3xl border bg-black shadow-2xl">
       <div className={`relative h-full w-full transition-opacity duration-300 ${isPlaying ? "opacity-100" : "opacity-50"}`}>
-        <Image
-          src="/camera-feed.png"
-          alt="Live Camera Feed"
-          fill
-          className="object-cover"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 50vw"
+        <video
+          ref={videoRef}
+          src="/api/camera"
+          className="h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          onPlay={() => setIsPlaying(true)}
+          onPause={() => setIsPlaying(false)}
         />
       </div>
 
@@ -32,7 +51,7 @@ export function CameraFeed() {
       <div className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-black/85 to-transparent p-5 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
         <div className="flex items-center gap-4">
           <button
-            onClick={() => setIsPlaying(!isPlaying)}
+            onClick={togglePlayback}
             className="rounded-full bg-white/15 p-2 transition-colors hover:bg-primary"
             aria-label={isPlaying ? "Tạm dừng camera" : "Phát camera"}
           >
@@ -40,7 +59,7 @@ export function CameraFeed() {
           </button>
           <div>
             <p className="text-sm font-bold">Khu rau xanh Farm Together</p>
-            <p className="text-xs text-white/70">Độ trễ mô phỏng: 2 giây</p>
+            <p className="text-xs text-white/70">Video mô phỏng Live Cam đang phát lặp</p>
           </div>
         </div>
         <div className="flex items-center gap-2">
@@ -56,7 +75,7 @@ export function CameraFeed() {
       {!isPlaying && (
         <div className="absolute inset-0 flex items-center justify-center">
           <button
-            onClick={() => setIsPlaying(true)}
+            onClick={togglePlayback}
             className="rounded-full bg-white/20 p-5 text-white backdrop-blur-md transition-all hover:scale-105 hover:bg-primary"
             aria-label="Phát lại camera"
           >
